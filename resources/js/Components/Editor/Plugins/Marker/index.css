@@ -1,0 +1,4 @@
+.tyuiu-marker {
+    @apply bg-blue-600 text-white;
+    padding: 3px 0;
+}

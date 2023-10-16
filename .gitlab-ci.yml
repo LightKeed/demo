@@ -1,0 +1,16 @@
+image: docker:git
+
+services:
+  - docker:dind
+
+stages:
+  - build
+
+before_script:
+  - docker login -u XXX -p $CI_BUILD_TOKEN registry.qqq.ru
+
+build:
+  stage: build
+  script:
+    - docker build -t registry.qqq.ru/main/qqq .
+    - docker push registry.qqq.ru/main/qqq:latest

@@ -1,0 +1,78 @@
+/* REQUIRED STYLES */
+
+
+.wdd-spoiler{
+    flex: 50%;
+}
+
+.wdd-spoiler-wrapper{
+    width:100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*
+
+These styles will also affect the parent editor!!!!!!
+
+*/
+
+.wdd-spoiler .ce-block__content,
+.wdd-spoiler .ce-toolbar__content {
+    max-width: calc(100% - 50px) !important;  /* example value, adjust for your own use case */
+}
+
+.wdd-spoiler .ce-toolbar__actions{
+    right: -25px;
+}
+
+/* Would be better to remove --narrow mode */
+/* Issue Raised */
+.codex-editor--narrow .codex-editor__redactor{
+    margin: 0;
+}
+
+/* Required to prevent clipping */
+.ce-toolbar{
+    z-index: 4;
+}
+
+.wdd-spoiler-wrapper {
+    @apply my-6;
+}
+
+.ce-block__content,
+.ce-toolbar__content {
+    max-width: calc(100% - 100px) !important;
+
+}
+
+.cdx-block {
+    max-width: 100% !important;
+}
+
+.wdd-spoiler{
+    @apply mt-4;
+
+    border: 1px solid #eee;
+    border-radius: 5px;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.wdd-spoiler:focus-within{
+    box-shadow: 0 6px 18px #e8edfa80;
+}
+
+h3[class~=wdd-spoiler-heading] {
+    @apply font-extrabold text-3xl leading-tight outline-0;
+}
+
+h4[class~=wdd-spoiler-heading] {
+    @apply text-2xl font-medium outline-0;
+}
+
+.wdd-spoiler-header {
+    @apply flex;
+}

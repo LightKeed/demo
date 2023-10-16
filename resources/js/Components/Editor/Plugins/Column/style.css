@@ -1,0 +1,43 @@
+.ce-editorjsColumns_col{
+    flex: 50%;
+    padding: 10px 0;
+}
+
+.ce-editorjsColumns_wrapper{
+    display: flex;
+    width:100%;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*
+
+These styles will also affect the parent editor!!!!!!
+
+*/
+
+.ce-editorjsColumns_col .ce-block__content {
+    max-width: calc(100% - 50px) !important;
+}
+
+.ce-editorjsColumns_col .ce-block__content,
+.ce-editorjsColumns_col .ce-toolbar__content {
+    max-width: calc(100% - 50px) !important;  /* example value, adjust for your own use case */
+}
+
+.ce-editorjsColumns_col .ce-toolbar__actions{
+    right: -25px;
+}
+
+/* Would be better to remove --narrow mode */
+/* Issue Raised */
+.codex-editor--narrow .codex-editor__redactor{
+    margin: 0;
+}
+
+/* Required to prevent clipping */
+.ce-toolbar{
+    z-index: 4;
+}
+
